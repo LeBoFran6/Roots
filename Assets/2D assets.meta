@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: dc6149c64a8d1d04b9d3e3d9bfa4aaa9
+=======
+guid: 382ce0336651c734fb2e21c681245bd3
+>>>>>>> parent of cbdcf6c (Merge branch 'main' into Charly)
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
