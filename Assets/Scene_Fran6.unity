@@ -21156,7 +21156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &583617916
 RectTransform:
   m_ObjectHideFlags: 0
@@ -60369,6 +60369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1632267272}
+  PLAYER1: {fileID: 0}
   Arbre: {fileID: 9217841514914895684, guid: bd4d2b3b183c05c4da91df4596ef2fda, type: 3}
   GameOver: {fileID: 293707820}
   Mooving: 0
@@ -60378,6 +60379,9 @@ MonoBehaviour:
   Etape3: 0
   END: 0
   random: 0
+  Noyau: {fileID: 0}
+  endCount: 0
+  Material1P2: {fileID: 0}
 --- !u!1001 &1634612225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72368,14 +72372,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 2026137543}
+  PLAYER2: {fileID: 0}
   Arbre1: {fileID: 9217841514914895684, guid: 27fa33b9dcedf9a45a5ecb66ec99500d, type: 3}
   GameOver: {fileID: 293707820}
+  Noyau: {fileID: 0}
   Mooving: 0
   Obstacle1: 0
   lave: 0
   Etape2: 0
   Etape3: 0
   END: 0
+  endCount: 0
+  MatP1: {fileID: 0}
   random: 0
 --- !u!65 &2026137545
 BoxCollider:
