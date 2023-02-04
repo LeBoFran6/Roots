@@ -28,7 +28,7 @@ public class Noyau : MonoBehaviour
         if (c.gameObject.name == "Player2")
         {
             P2.GetComponent<Player2>().END = true;
-            //Debug.Log("END");
+            Debug.Log("END");
         }
 
 
