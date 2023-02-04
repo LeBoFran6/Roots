@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scene_Fran6.unity
+    guid: 100ddaf3c29e0e040a9d5ac50b520f25
   m_configObjects: {}
