@@ -23,13 +23,19 @@ public class confirm : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        PlayerPrefs.DeleteAll();
     }
 
     // Update is called once per frame
     void Update()
     {
         DisplayStart();
+
+        //CheckJ1Validated();
+        //CheckJ2Validated();
+        CheckJ3Validated();
+        CheckJ4Validated();
+
     }
 
     public void recup()
@@ -83,7 +89,7 @@ public class confirm : MonoBehaviour
                 case 3:
                     choice = PlayerPrefs.GetInt("ArbreJ4");
                     J4Valide = true;
-                    Debug.Log(choice + " J3 valide");
+                    Debug.Log(choice + " J4 valide");
                     PlayTreeSound();
                     break;
             }
@@ -116,4 +122,34 @@ public class confirm : MonoBehaviour
                 break;
         }
     }
+
+    public void CheckJ1Validated()
+    {
+        if (!J1Valide)
+        {
+            PlayerPrefs.SetInt("ArbreJ1", 4);
+        }
+    }
+    public void CheckJ2Validated()
+    {
+        if (!J2Valide)
+        {
+            PlayerPrefs.SetInt("ArbreJ2", 4);
+        }
+    }
+    public void CheckJ3Validated()
+    {
+        if (J3Valide == false)
+        {
+            PlayerPrefs.SetInt("ArbreJ3", 4);
+        }
+    }
+    public void CheckJ4Validated()
+    {
+        if (J4Valide == false)
+        {
+            PlayerPrefs.SetInt("ArbreJ4", 4);
+        }
+    }
+
 }

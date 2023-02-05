@@ -16,7 +16,6 @@ public class Player3 : MonoBehaviour
     public GameObject Cerisier;
     public GameObject Erable;
     public GameObject Sapin;
-
     public GameObject Noyau;
 
     public AudioSource GrowSound;
@@ -86,13 +85,20 @@ public class Player3 : MonoBehaviour
                 Erable.SetActive(false);
                 Arbre.GetComponent<MeshRenderer>().material = MatR4;
                 break;
+
+            case 4:
+                Baobab.SetActive(false);
+                Cerisier.SetActive(false);
+                Erable.SetActive(false);
+                Sapin.SetActive(false);
+                GameObject.Find("P3").SetActive(false);
+                break;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-
 
         random = Random.Range(-0.1f, 0.1f);
 

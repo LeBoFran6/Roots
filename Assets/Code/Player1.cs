@@ -15,7 +15,6 @@ public class Player1 : MonoBehaviour
     public GameObject Cerisier;
     public GameObject Erable;
     public GameObject Sapin;
-
     public GameObject Noyau;
 
     public AudioSource GrowSound;
@@ -35,6 +34,7 @@ public class Player1 : MonoBehaviour
     public bool Etape3 = false;
     public bool END = false;
 
+
     public TextMeshProUGUI Score;
     
     public float random;
@@ -52,6 +52,7 @@ public class Player1 : MonoBehaviour
         // ici je récupère l'index de l'arbre choisi par le J1 et je l'assigne à treeID
         treeId = PlayerPrefs.GetInt("ArbreJ1");
         Score = GameOverCanva.GetComponentInChildren<TextMeshProUGUI>();
+
         switch (treeId)
         {
             case 0:
@@ -85,6 +86,7 @@ public class Player1 : MonoBehaviour
                 Erable.SetActive(false);
                 Arbre1.GetComponent<MeshRenderer>().material = MatR4;
                 break;
+
         }
     }
 
@@ -252,5 +254,7 @@ public class Player1 : MonoBehaviour
     public void BackToMenu()
     {
         SceneManager.LoadScene(0);
+        PlayerPrefs.DeleteAll();
     }
+
 }

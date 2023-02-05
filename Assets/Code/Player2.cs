@@ -85,6 +85,7 @@ public class Player2 : MonoBehaviour
                 Erable.SetActive(false);
                 Arbre.GetComponent<MeshRenderer>().material = MatR4;
                 break;
+
         }
     }
 
