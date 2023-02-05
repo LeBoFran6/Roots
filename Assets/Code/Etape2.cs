@@ -8,6 +8,8 @@ public class Etape2 : MonoBehaviour
 
     public GameObject ScriptHolder;
     public GameObject P2;
+    public GameObject P3;
+    public GameObject P4;
     public AudioSource MusicLayer_2;
     public GameObject map;
     
@@ -38,6 +40,20 @@ public class Etape2 : MonoBehaviour
         if (c.gameObject.name == "Player2")
         {
             P2.GetComponent<Player2>().Etape2 = true;
+            //Debug.Log("HHHHHHHHHHHHH");
+            SetVolume();
+            rotateAmount = new Vector3(0, 0, 2);
+        }
+        if (c.gameObject.name == "Player3")
+        {
+            P3.GetComponent<Player3>().Etape2 = true;
+            //Debug.Log("HHHHHHHHHHHHH");
+            SetVolume();
+            rotateAmount = new Vector3(0, 0, 2);
+        }
+        if (c.gameObject.name == "Player4")
+        {
+            P4.GetComponent<Player4>().Etape2 = true;
             //Debug.Log("HHHHHHHHHHHHH");
             SetVolume();
             rotateAmount = new Vector3(0, 0, 2);
