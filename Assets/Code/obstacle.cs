@@ -7,6 +7,8 @@ public class obstacle : MonoBehaviour
 
     public GameObject ScriptHolder;
     public GameObject P2;
+    public GameObject P3;
+    public GameObject P4;
     public AudioSource CollisionSound;
 
     // Start is called before the first frame update
@@ -15,6 +17,8 @@ public class obstacle : MonoBehaviour
         //ScriptHolder = FindObjectOfType<GameObject>().name;
         ScriptHolder = GameObject.Find("Player1");
         P2 = GameObject.Find("Player2");
+        P3 = GameObject.Find("Player3");
+        P4 = GameObject.Find("Player4");
         CollisionSound = GameObject.Find("Blocked").GetComponent<AudioSource>();
     }
 
@@ -38,8 +42,18 @@ public class obstacle : MonoBehaviour
             P2.GetComponent<Player2>().Obstacle1 = true;
             CollisionSound.Play();
         }
-    
-        
+        if (c.gameObject.name == "Player3")
+        {
+            P3.GetComponent<Player3>().Obstacle1 = true;
+            CollisionSound.Play();
+        }
+        if (c.gameObject.name == "Player4")
+        {
+            P4.GetComponent<Player4>().Obstacle1 = true;
+            CollisionSound.Play();
+        }
+
+
 
     }
 }

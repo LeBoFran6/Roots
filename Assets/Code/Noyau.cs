@@ -6,6 +6,8 @@ public class Noyau : MonoBehaviour
 {
     public GameObject ScriptHolder;
     public GameObject P2;
+    public GameObject P3;
+    public GameObject P4;
     public AudioSource EndSound;
     
 
@@ -36,7 +38,16 @@ public class Noyau : MonoBehaviour
             EndSound.Play();
             
         }
-
+        if (c.gameObject.name == "Player3")
+        {
+            P3.GetComponent<Player3>().END = true;
+            EndSound.Play();
+        }
+        if (c.gameObject.name == "Player4")
+        {
+            P4.GetComponent<Player4>().END = true;
+            EndSound.Play();
+        }
 
     }
 }

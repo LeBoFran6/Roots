@@ -6,6 +6,8 @@ public class Etape3 : MonoBehaviour
 {
     public GameObject ScriptHolder;
     public GameObject P2;
+    public GameObject P3;
+    public GameObject P4;
     public AudioSource MusicLayer_3;
     public GameObject map;
 
@@ -36,6 +38,18 @@ public class Etape3 : MonoBehaviour
         if (c.gameObject.name == "Player2")
         {
             P2.GetComponent<Player2>().Etape3 = true;
+            SetVolume();
+            rot.z = 4;
+        }
+        if (c.gameObject.name == "Player3")
+        {
+            P3.GetComponent<Player3>().Etape3 = true;
+            SetVolume();
+            rot.z = 4;
+        }
+        if (c.gameObject.name == "Player4")
+        {
+            P4.GetComponent<Player4>().Etape3 = true;
             SetVolume();
             rot.z = 4;
         }
