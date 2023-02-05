@@ -486,7 +486,6 @@ MonoBehaviour:
   sapin: {fileID: 1886260424}
   indexTree: 0
   playerid: 0
-  PlayersChoice: []
 --- !u!1 &60799963
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,11 +1357,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a85e0004f2dbcbd4fb9c5eced4448aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveplayers: []
-  action: 0
+  choice: 0
   selecttrees: {fileID: 0}
   leftArrow: {fileID: 858708041}
   rightArrow: {fileID: 222672912}
+  StartButton: {fileID: 0}
+  BaobabSound: {fileID: 0}
+  CerisierSound: {fileID: 0}
+  ErableSound: {fileID: 0}
+  SapinSound: {fileID: 0}
 --- !u!1 &358799677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,7 +1699,6 @@ MonoBehaviour:
   sapin: {fileID: 268006371}
   indexTree: 0
   playerid: 3
-  PlayersChoice: []
 --- !u!1 &573803733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,7 +1834,6 @@ MonoBehaviour:
   sapin: {fileID: 2102649009}
   indexTree: 0
   playerid: 1
-  PlayersChoice: []
 --- !u!1 &678766046
 GameObject:
   m_ObjectHideFlags: 0
@@ -2132,7 +2133,6 @@ MonoBehaviour:
   sapin: {fileID: 545715723}
   indexTree: 0
   playerid: 2
-  PlayersChoice: []
 --- !u!1 &858708041
 GameObject:
   m_ObjectHideFlags: 0
@@ -5157,11 +5157,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a85e0004f2dbcbd4fb9c5eced4448aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveplayers: []
-  action: 0
+  choice: 0
   selecttrees: {fileID: 0}
   leftArrow: {fileID: 44661983}
   rightArrow: {fileID: 1937905314}
+  StartButton: {fileID: 0}
+  BaobabSound: {fileID: 0}
+  CerisierSound: {fileID: 0}
+  ErableSound: {fileID: 0}
+  SapinSound: {fileID: 0}
 --- !u!114 &1713953182
 MonoBehaviour:
   m_ObjectHideFlags: 0
