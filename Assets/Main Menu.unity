@@ -2078,8 +2078,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choice: 0
   selecttrees: {fileID: 554580964}
-  leftArrow: {fileID: 44661983}
-  rightArrow: {fileID: 1937905314}
+  leftArrow: {fileID: 1091004239}
+  rightArrow: {fileID: 1428938227}
   StartButton: {fileID: 122405387}
   BaobabSound: {fileID: 2120507451}
   CerisierSound: {fileID: 816812069}
@@ -5615,8 +5615,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choice: 0
   selecttrees: {fileID: 801740305}
-  leftArrow: {fileID: 44661983}
-  rightArrow: {fileID: 1937905314}
+  leftArrow: {fileID: 1024661377}
+  rightArrow: {fileID: 245477506}
   StartButton: {fileID: 122405387}
   BaobabSound: {fileID: 2120507451}
   CerisierSound: {fileID: 816812069}
