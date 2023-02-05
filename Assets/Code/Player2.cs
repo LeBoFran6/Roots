@@ -9,7 +9,9 @@ public class Player2 : MonoBehaviour
     public GameObject Arbre;
     public AudioSource GrowSound;
     public AudioSource EndSound;
+    public AudioSource WooshSound;
     public GameObject GameOver;
+    public GameObject GameOverCanva;
 
     public bool Mooving = false;
 
@@ -153,6 +155,9 @@ public class Player2 : MonoBehaviour
         if (END == true)
         {
             Debug.Log("OOOOOOOOOOOOOO");
+            EndSound.Play();
+            WooshSound.Play();
+            GameOverCanva.SetActive(true);
         }
 
 
@@ -162,11 +167,13 @@ public class Player2 : MonoBehaviour
 
 
 
-        if (Player.transform.position.y <= 0)
+        if (Player.transform.position.y >= 0)
         {
             //Debug.Log("GameOver");
             //GameOver.SetActive(true);
             EndSound.Play();
+            WooshSound.Play();
+            GameOverCanva.SetActive(true);
         }
 
     }

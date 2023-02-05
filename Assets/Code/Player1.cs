@@ -9,7 +9,9 @@ public class Player1 : MonoBehaviour
     public GameObject Arbre1;
     public AudioSource GrowSound;
     public AudioSource EndSound;
+    public AudioSource WooshSound;
     public GameObject GameOver;
+    public GameObject GameOverCanva;
 
     public bool Mooving = false;
 
@@ -35,7 +37,7 @@ public class Player1 : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            LoadScene();
         }
 
 
@@ -136,24 +138,30 @@ public class Player1 : MonoBehaviour
             }
         }
 
-
-        
-
-
-
-
-
-
         Mooving = false;
 
 
 
         if(Player.transform.position.y <= 0)
         {
+            
             //Debug.Log("GameOver");
             GameOver.SetActive(true);
             EndSound.Play();
+            WooshSound.Play();
+            GameOverCanva.SetActive(true);
         }
 
+    }
+    
+    public void LoadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+        
     }
 }
