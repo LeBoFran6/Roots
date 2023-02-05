@@ -75,7 +75,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Defilement
-  m_Speed: 0.1
+  m_Speed: 0.02
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -99,7 +99,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RawImage (1)
+  m_Name: Nuages_Defilement
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: menu
@@ -107,7 +107,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -157,10 +157,10 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 4896991930532402298}
-    m_Position: {x: -160, y: 520, z: 0}
+    m_Position: {x: -40, y: 660, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2476242548728444733}
-    m_Position: {x: 120, y: 520, z: 0}
+    m_Position: {x: 170, y: 550, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6159581498477480583}
     m_Position: {x: -10, y: 400, z: 0}
@@ -183,7 +183,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: New Animationddtere
-  m_Speed: 1
+  m_Speed: 0.1
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []

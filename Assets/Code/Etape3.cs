@@ -6,6 +6,7 @@ public class Etape3 : MonoBehaviour
 {
     public GameObject ScriptHolder;
     public GameObject P2;
+    public AudioSource MusicLayer_3;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,13 +26,21 @@ public class Etape3 : MonoBehaviour
         if (c.gameObject.name == "Player1")
         {
             ScriptHolder.GetComponent<Player1>().Etape3 = true;
+            SetVolume();
         }
+
         if (c.gameObject.name == "Player2")
         {
             P2.GetComponent<Player2>().Etape3 = true;
+            SetVolume();
         }
-
-
     }
 
+    private void SetVolume()
+    {
+        while (MusicLayer_3.volume != 1)
+        {
+            MusicLayer_3.volume += 0.1f ;
+        }
+    }
 }

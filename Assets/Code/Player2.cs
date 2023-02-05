@@ -7,7 +7,8 @@ public class Player2 : MonoBehaviour
 {
     public GameObject Player;
     public GameObject Arbre;
-
+    public AudioSource GrowSound;
+    public AudioSource EndSound;
     public GameObject GameOver;
 
     public bool Mooving = false;
@@ -113,6 +114,8 @@ public class Player2 : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.O) && Mooving == false)
             {
+                GrowSound.Play(
+                    );
                 if (Etape3 == true)
                 {
 
@@ -163,6 +166,7 @@ public class Player2 : MonoBehaviour
         {
             //Debug.Log("GameOver");
             //GameOver.SetActive(true);
+            EndSound.Play();
         }
 
     }
