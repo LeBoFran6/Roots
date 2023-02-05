@@ -7,28 +7,65 @@ public class Player1 : MonoBehaviour
 {
     public GameObject Player;
     public GameObject Arbre1;
+    public GameObject GameOver;
+    public GameObject GameOverCanva;
+    public GameObject Baobab;
+    public GameObject Cerisier;
+    public GameObject Erable;
+    public GameObject Sapin;
+
     public AudioSource GrowSound;
     public AudioSource EndSound;
     public AudioSource WooshSound;
-    public GameObject GameOver;
-    public GameObject GameOverCanva;
-
+    
     public bool Mooving = false;
-
     public bool Obstacle1 ;
     public bool lave;
     public bool Etape2 = false;
     public bool Etape3 = false;
     public bool END = false;
 
-
-
     public float random;
+    
+    // je stocke en local l'id de larbre
+    private int treeId;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        // ici je récupère l'index de l'arbre choisi par le J1 et je l'assigne à treeID
+        treeId = PlayerPrefs.GetInt("ArbreJ1");
+
+        switch (treeId)
+        {
+            case 0:
+                Baobab.SetActive(true);
+                Cerisier.SetActive(false);
+                Erable.SetActive(false);
+                Sapin.SetActive(false);
+                break;
+            
+            case 1:
+                Cerisier.SetActive(true);
+                Baobab.SetActive(false);
+                Erable.SetActive(false);
+                Sapin.SetActive(false);
+                break;
+            
+            case 2:
+                Erable.SetActive(true);
+                Baobab.SetActive(false);
+                Cerisier.SetActive(false);
+                Sapin.SetActive(false);
+                break;
+            
+            case 3:
+                Sapin.SetActive(true);
+                Baobab.SetActive(false);
+                Cerisier.SetActive(false);
+                Erable.SetActive(false);
+                break;
+        }
     }
 
     // Update is called once per frame
@@ -161,7 +198,6 @@ public class Player1 : MonoBehaviour
 
     public void BackToMenu()
     {
-        SceneManager.LoadScene("MainMenu");
-        
+        SceneManager.LoadScene(0);
     }
 }

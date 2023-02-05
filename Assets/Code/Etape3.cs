@@ -7,16 +7,19 @@ public class Etape3 : MonoBehaviour
     public GameObject ScriptHolder;
     public GameObject P2;
     public AudioSource MusicLayer_3;
+    public GameObject map;
+
+    private Vector3 rot;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        map.transform.Rotate(rot * Time.deltaTime);
     }
 
 
@@ -27,12 +30,14 @@ public class Etape3 : MonoBehaviour
         {
             ScriptHolder.GetComponent<Player1>().Etape3 = true;
             SetVolume();
+            rot.z = 4;
         }
 
         if (c.gameObject.name == "Player2")
         {
             P2.GetComponent<Player2>().Etape3 = true;
             SetVolume();
+            rot.z = 4;
         }
     }
 

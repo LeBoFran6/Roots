@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -26,5 +27,10 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = Array.Find(l_sounds, sounds => sounds.objectName == name);
         s.source.Stop();
+    }
+    
+    public void LoadLevel()
+    {
+        SceneManager.LoadScene(1);
     }
 }
