@@ -41,6 +41,8 @@ public class Player1 : MonoBehaviour
 
     public float endCount;
 
+    public GameObject Explosion;
+
     // je stocke en local l'id de larbre
     private int treeId;
 
@@ -116,7 +118,7 @@ public class Player1 : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.Q))
                 {
-                    if (Input.GetKeyDown(KeyCode.Z))
+                    if (Input.GetKeyDown(KeyCode.Q))
                     {
                         if (Obstacle1 == true)
                         {
@@ -139,7 +141,7 @@ public class Player1 : MonoBehaviour
 
                 if (Input.GetKey(KeyCode.D))
                 {
-                    if (Input.GetKeyDown(KeyCode.Z))
+                    if (Input.GetKeyDown(KeyCode.D))
                     {
                         if (Obstacle1 == true)
                         {
@@ -220,7 +222,8 @@ public class Player1 : MonoBehaviour
 
                 if (endCount >= 30)
                 {
-                    Noyau.GetComponent<MeshRenderer>().material = MatP1;
+                    //Noyau.GetComponent<MeshRenderer>().material = MatP1;
+                    Explosion.SetActive(true);
                     StartCoroutine(Attendre());
                     EndSound.Play();
                 }
