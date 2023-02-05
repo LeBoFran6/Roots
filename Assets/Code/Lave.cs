@@ -7,7 +7,7 @@ public class Lave : MonoBehaviour
 
     public GameObject ScriptHolder;
     public GameObject P2;
-
+    public AudioSource BurntSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,10 +25,12 @@ public class Lave : MonoBehaviour
         if (c.gameObject.name == "Player1")
         {
             ScriptHolder.GetComponent<Player1>().lave = true;
+            BurntSound.Play();
         }
         if (c.gameObject.name == "Player2")
         {
             P2.GetComponent<Player2>().lave = true;
+            BurntSound.Play();
         }
 
 
