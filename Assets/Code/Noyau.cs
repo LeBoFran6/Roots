@@ -7,6 +7,8 @@ public class Noyau : MonoBehaviour
     public GameObject ScriptHolder;
     public GameObject P2;
     public AudioSource EndSound;
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +34,7 @@ public class Noyau : MonoBehaviour
             P2.GetComponent<Player2>().END = true;
             Debug.Log("END");
             EndSound.Play();
+            
         }
 
 

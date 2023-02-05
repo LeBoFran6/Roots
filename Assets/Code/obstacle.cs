@@ -12,8 +12,12 @@ public class obstacle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //ScriptHolder = FindObjectOfType<GameObject>().name;
+        ScriptHolder = GameObject.Find("Player1");
+        P2 = GameObject.Find("Player2");
+        CollisionSound = GameObject.Find("Blocked").GetComponent<AudioSource>();
     }
+
 
     // Update is called once per frame
     void Update()
