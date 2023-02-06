@@ -30,12 +30,6 @@ public class confirm : MonoBehaviour
     void Update()
     {
         DisplayStart();
-
-        //CheckJ1Validated();
-        //CheckJ2Validated();
-        CheckJ3Validated();
-        CheckJ4Validated();
-
     }
 
     public void recup()
@@ -123,6 +117,15 @@ public class confirm : MonoBehaviour
         }
     }
 
+    public void CheckValidated()
+    {
+
+        CheckJ1Validated();
+        CheckJ2Validated();
+        CheckJ3Validated();
+        CheckJ4Validated();
+    }
+    
     public void CheckJ1Validated()
     {
         if (!J1Valide)
@@ -139,14 +142,14 @@ public class confirm : MonoBehaviour
     }
     public void CheckJ3Validated()
     {
-        if (J3Valide == false)
+        if (!J3Valide)
         {
             PlayerPrefs.SetInt("ArbreJ3", 4);
         }
     }
     public void CheckJ4Validated()
     {
-        if (J4Valide == false)
+        if (!J4Valide)
         {
             PlayerPrefs.SetInt("ArbreJ4", 4);
         }

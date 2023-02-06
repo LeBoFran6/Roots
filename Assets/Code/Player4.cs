@@ -48,7 +48,7 @@ public class Player4 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // ici je récupère l'index de l'arbre choisi par le J2 et je l'assigne à treeID
+        // ici je rï¿½cupï¿½re l'index de l'arbre choisi par le J2 et je l'assigne ï¿½ treeID
         treeId = PlayerPrefs.GetInt("ArbreJ4");
         Score = GameOverCanva.GetComponentInChildren<TextMeshProUGUI>();
 
@@ -101,168 +101,187 @@ public class Player4 : MonoBehaviour
     void Update()
     {
 
-
-        random = Random.Range(-0.1f, 0.1f);
-
-       // Debug.Log(treeId);
-
-        if (lave == true)
+        if (treeId != 4)
         {
-            // GameOver.SetActive(true);
-            Player.transform.position = new Vector3(12.25f, 0, -0.1f);
-            lave = false;
+            random = Random.Range(-0.1f, 0.1f);
 
-        }
+            // Debug.Log(treeId);
+
+            if (lave == true)
+            {
+                // GameOver.SetActive(true);
+                Player.transform.position = new Vector3(12.25f, 0, -0.1f);
+                lave = false;
+
+            }
 
 
-        if (lave == false)
-        {
-
-            if (END == false)
+            if (lave == false)
             {
 
-                if (Input.GetKey(KeyCode.V))
+                if (END == false)
                 {
-                    if (Input.GetKeyDown(KeyCode.V))
+
+                    if (Input.GetKey(KeyCode.V))
                     {
-                        if (Obstacle1 == true)
+                        if (Input.GetKeyDown(KeyCode.V))
                         {
-                            Mooving = true;
-                            Instantiate(Arbre, new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z), Quaternion.identity);
-                            Player.transform.position = Player.transform.position + new Vector3(-0.03f, 0.08f, 0);
-                            //Debug.Log("Space Q.");
-                            Obstacle1 = false;
-                        }/*
-                if(Etape2 == true)
-                {
-                    Mooving = true;
-                    Instantiate(Arbre1, new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z), Quaternion.identity);
-                    Player.transform.position = Player.transform.position + new Vector3(-0.08f, -0.3f, 0);
-                    Debug.Log("SUUUUUUUUUUUUUUUUU.");
-                    Etape2 = false;
-                }*/
-                        else
-                        {
-                            Mooving = true;
-                            Instantiate(Arbre, new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z), Quaternion.identity);
-                            Player.transform.position = Player.transform.position + new Vector3(-0.07f, 0.15f, 0);
-                            //Debug.Log("Space Q.");
-                        }
-
-                    }
-                }
-
-                if (Input.GetKey(KeyCode.N))
-                {
-                    if (Input.GetKeyDown(KeyCode.N))
+                            if (Obstacle1 == true)
+                            {
+                                Mooving = true;
+                                Instantiate(Arbre,
+                                    new Vector3(Player.transform.position.x, Player.transform.position.y,
+                                        Player.transform.position.z), Quaternion.identity);
+                                Player.transform.position = Player.transform.position + new Vector3(-0.03f, 0.08f, 0);
+                                //Debug.Log("Space Q.");
+                                Obstacle1 = false;
+                            } /*
+                    if(Etape2 == true)
                     {
-                        if (Obstacle1 == true)
-                        {
-                            Mooving = true;
-                            Instantiate(Arbre, new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z), Quaternion.identity);
-                            Player.transform.position = Player.transform.position + new Vector3(-0.03f, -0.08f, 0);
-                            //Debug.Log("Space D.");
-                            Obstacle1 = false;
-                        }/*
-                if (Etape2 == true)
-                {
-                    Mooving = true;
-                    Instantiate(Arbre1, new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z), Quaternion.identity);
-                    Player.transform.position = Player.transform.position + new Vector3(0.08f, -0.3f, 0);
-                    Debug.Log("SUUUUUUUUUUUUUUUUU.");
-                    Etape2 = false;
-                }*/
-                        else
-                        {
-                            Mooving = true;
-                            Instantiate(Arbre, new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z), Quaternion.identity);
-                            Player.transform.position = Player.transform.position + new Vector3(-0.07f, -0.15f, 0);
-                            //Debug.Log("Space D.");
-                        }
-
-                    }
-                }
-
-
-                if (Input.GetKeyDown(KeyCode.G) && Mooving == false)
-                {
-                    GrowSound.Play(
-                        );
-                    if (Etape3 == true)
-                    {
-
-                        Instantiate(Arbre, new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z), Quaternion.identity);
-                        Player.transform.position = Player.transform.position + new Vector3(-0.2f, random, 0);
-                        //Debug.Log("SUUUUUUUUUUUUUUUUU.");
+                        Mooving = true;
+                        Instantiate(Arbre1, new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z), Quaternion.identity);
+                        Player.transform.position = Player.transform.position + new Vector3(-0.08f, -0.3f, 0);
+                        Debug.Log("SUUUUUUUUUUUUUUUUU.");
                         Etape2 = false;
+                    }*/
+                            else
+                            {
+                                Mooving = true;
+                                Instantiate(Arbre,
+                                    new Vector3(Player.transform.position.x, Player.transform.position.y,
+                                        Player.transform.position.z), Quaternion.identity);
+                                Player.transform.position = Player.transform.position + new Vector3(-0.07f, 0.15f, 0);
+                                //Debug.Log("Space Q.");
+                            }
+
+                        }
                     }
+
+                    if (Input.GetKey(KeyCode.N))
+                    {
+                        if (Input.GetKeyDown(KeyCode.N))
+                        {
+                            if (Obstacle1 == true)
+                            {
+                                Mooving = true;
+                                Instantiate(Arbre,
+                                    new Vector3(Player.transform.position.x, Player.transform.position.y,
+                                        Player.transform.position.z), Quaternion.identity);
+                                Player.transform.position = Player.transform.position + new Vector3(-0.03f, -0.08f, 0);
+                                //Debug.Log("Space D.");
+                                Obstacle1 = false;
+                            } /*
                     if (Etape2 == true)
                     {
+                        Mooving = true;
+                        Instantiate(Arbre1, new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z), Quaternion.identity);
+                        Player.transform.position = Player.transform.position + new Vector3(0.08f, -0.3f, 0);
+                        Debug.Log("SUUUUUUUUUUUUUUUUU.");
+                        Etape2 = false;
+                    }*/
+                            else
+                            {
+                                Mooving = true;
+                                Instantiate(Arbre,
+                                    new Vector3(Player.transform.position.x, Player.transform.position.y,
+                                        Player.transform.position.z), Quaternion.identity);
+                                Player.transform.position = Player.transform.position + new Vector3(-0.07f, -0.15f, 0);
+                                //Debug.Log("Space D.");
+                            }
 
-                        Instantiate(Arbre, new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z), Quaternion.identity);
-                        Player.transform.position = Player.transform.position + new Vector3(-0.15f, random, 0);
-                        //Debug.Log("SUUUUUUUUUUUUUUioioioiUUU.");
-                        //Etape2 = false;
+                        }
                     }
-                    if (Obstacle1 == true)
+
+
+                    if (Input.GetKeyDown(KeyCode.G) && Mooving == false)
                     {
-                        Instantiate(Arbre, new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z), Quaternion.identity);
-                        Player.transform.position = Player.transform.position + new Vector3(-0.03f, random, 0);
-                        //Debug.Log("Space key was pressed.");
-                    }
-                    else
-                    {
-                        Instantiate(Arbre, new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z), Quaternion.identity);
-                        Player.transform.position = Player.transform.position + new Vector3(-0.09f, random, 0);
-                        //Debug.Log("Space key was pressed.");
+                        GrowSound.Play(
+                        );
+                        if (Etape3 == true)
+                        {
+
+                            Instantiate(Arbre,
+                                new Vector3(Player.transform.position.x, Player.transform.position.y,
+                                    Player.transform.position.z), Quaternion.identity);
+                            Player.transform.position = Player.transform.position + new Vector3(-0.2f, random, 0);
+                            //Debug.Log("SUUUUUUUUUUUUUUUUU.");
+                            Etape2 = false;
+                        }
+
+                        if (Etape2 == true)
+                        {
+
+                            Instantiate(Arbre,
+                                new Vector3(Player.transform.position.x, Player.transform.position.y,
+                                    Player.transform.position.z), Quaternion.identity);
+                            Player.transform.position = Player.transform.position + new Vector3(-0.15f, random, 0);
+                            //Debug.Log("SUUUUUUUUUUUUUUioioioiUUU.");
+                            //Etape2 = false;
+                        }
+
+                        if (Obstacle1 == true)
+                        {
+                            Instantiate(Arbre,
+                                new Vector3(Player.transform.position.x, Player.transform.position.y,
+                                    Player.transform.position.z), Quaternion.identity);
+                            Player.transform.position = Player.transform.position + new Vector3(-0.03f, random, 0);
+                            //Debug.Log("Space key was pressed.");
+                        }
+                        else
+                        {
+                            Instantiate(Arbre,
+                                new Vector3(Player.transform.position.x, Player.transform.position.y,
+                                    Player.transform.position.z), Quaternion.identity);
+                            Player.transform.position = Player.transform.position + new Vector3(-0.09f, random, 0);
+                            //Debug.Log("Space key was pressed.");
+                        }
                     }
                 }
             }
-        }
 
 
-        if (END)
-        {
-            if (Input.GetKeyDown(KeyCode.G))
+            if (END)
             {
-                Noyau.transform.localScale = Noyau.transform.localScale + new Vector3(0.05f, 0.05f, 0.05f);
-                endCount = endCount + 1;
+                if (Input.GetKeyDown(KeyCode.G))
+                {
+                    Noyau.transform.localScale = Noyau.transform.localScale + new Vector3(0.05f, 0.05f, 0.05f);
+                    endCount = endCount + 1;
+
+                }
+
+                if (endCount >= 30)
+                {
+                    //Noyau.GetComponent<MeshRenderer>().material = Material1P2;
+                    Explosion.SetActive(true);
+                    StartCoroutine(Attendre());
+                }
 
             }
 
-            if (endCount >= 30)
+            /* if (END == true)
+             {
+                 Debug.Log("OOOOOOOOOOOOOO");
+                 EndSound.Play();
+                 WooshSound.Play();
+                 GameOverCanva.SetActive(true);
+             }*/
+
+
+
+
+            Mooving = false;
+
+
+
+            /*if (Player.transform.position.y >= 0)
             {
-                //Noyau.GetComponent<MeshRenderer>().material = Material1P2;
-                Explosion.SetActive(true);
-                StartCoroutine(Attendre());
-            }
-
+                //Debug.Log("GameOver");
+                //GameOver.SetActive(true);
+                EndSound.Play();
+                WooshSound.Play();
+                GameOverCanva.SetActive(true);
+            }*/
         }
-
-        /* if (END == true)
-         {
-             Debug.Log("OOOOOOOOOOOOOO");
-             EndSound.Play();
-             WooshSound.Play();
-             GameOverCanva.SetActive(true);
-         }*/
-
-
-
-
-        Mooving = false;
-
-
-
-        /*if (Player.transform.position.y >= 0)
-        {
-            //Debug.Log("GameOver");
-            //GameOver.SetActive(true);
-            EndSound.Play();
-            WooshSound.Play();
-            GameOverCanva.SetActive(true);
-        }*/
-
     }
 
     private IEnumerator Attendre()
