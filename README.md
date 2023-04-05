@@ -6,6 +6,8 @@ Local multiplayer - 1 VS 1 (up to 4 players)
 
 ![My Image](00.png)
 
+Play the game : https://daunan-hortense.itch.io/roots
+
 A Root© production :
 
 - Francisco De Carvalho Pereira (Dev)
